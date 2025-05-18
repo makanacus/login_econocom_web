@@ -17,4 +17,8 @@ export class AuthService {
     const url = `http://localhost:8080/api/auth/sso/callback?code=${code}`;
     return this.http.get(url);
   }
+
+  checkSSOServer() {
+    return this.http.get('http://localhost:8080/api/auth/sso/ping', { responseType: 'text' });
+  }
 }

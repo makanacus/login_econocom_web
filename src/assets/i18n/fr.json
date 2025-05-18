@@ -10,12 +10,14 @@
   "decathlon": "SE CONNECTER AVEC DECATHLON",
   "registerPrompt": "Vous n'avez pas de compte ?",
   "registerLink": "Inscrivez-vous",
+  "registre": "Attention ! L'inscription est temporairement désactivée.",
   "languageLabel": "LANGUE :",
   "login": {
     "success": "Connexion réussie",
     "ssoSuccess": "Connexion SSO réussie",
     "invalidUser": "Utilisateur non trouvé",
-    "invalidPassword": "Mot de passe invalide"
+    "invalidPassword": "Mot de passe invalide",
+    "serverUnavailable": "Le serveur est indisponible. Veuillez réessayer plus tard."
   },
   "sso": {
     "authSuccess": "Authentification SSO réussie. Redirection...",

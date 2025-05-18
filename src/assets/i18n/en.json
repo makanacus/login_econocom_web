@@ -10,12 +10,14 @@
   "decathlon": "LOGIN WITH DECATHLON",
   "registerPrompt": "Don't have an account?",
   "registerLink": "Sign up",
+  "registre": "Attention! Registration is temporarily disabled.",
   "languageLabel": "LANGUAGE:",
   "login": {
     "success": "Login successful",
     "ssoSuccess": "SSO login successful",
     "invalidUser": "User not found",
-    "invalidPassword": "Invalid password"
+    "invalidPassword": "Invalid password",
+    "serverUnavailable": "The server is unavailable. Please try again later."
   },
   "sso": {
     "authSuccess": "SSO authentication successful. Redirecting...",

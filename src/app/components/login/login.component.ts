@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   passwordErrorMsg: string | null = null;
   showWarning = false;
   warningTimeout: any;
+  registre: string | null = null;
 
   private langSub?: Subscription;
 
@@ -43,6 +44,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.langSub = this.translateService.langChange$.subscribe(lang => {
       this.selectedLanguage = lang;
     });
+
+    this.registre = 'registre';
 
     this.route.queryParams.subscribe(params => {
     if (params['sso'] === 'true' && params['token']) {
@@ -102,6 +105,14 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.token = response.token;
       },
       error: (err) => {
+        if (err.status === 0) {
+          this.emailErrorMsg = 'login.serverUnavailable';
+          this.warningTimeout = setTimeout(() => {
+          this.emailErrorMsg = null;
+          }, 3000);
+          return;
+        }
+
         const message = err.error?.message || '';
         const key = this.mapErrorMessage(message);
 
@@ -126,7 +137,17 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   
   startSSOLogin(): void {
-    window.location.href = 'http://localhost:8080/api/auth/sso';
-  } 
+    this.authService.checkSSOServer().subscribe({
+      next: () => {
+        window.location.href = 'http://localhost:8080/api/auth/sso';
+      },
+      error: () => {
+        this.emailErrorMsg = 'login.serverUnavailable';
+        this.warningTimeout = setTimeout(() => {
+        this.emailErrorMsg = null;
+        }, 3000);
+      }
+    });
+  }
 
 }
