@@ -38,7 +38,7 @@
       align-items: center;
       max-width: 100%;
       margin: 0 auto;
-      width: 100%;
+      width: 80%;
 
       .login-header {
         width: 100%;
@@ -269,6 +269,7 @@
 
       .form-content {
         padding-top: $spacing-s;
+        width: 80%;
 
         h1 {
           font-size: 1.5rem;
