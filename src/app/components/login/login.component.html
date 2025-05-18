@@ -1,0 +1,86 @@
+<div class="login-container">
+  <div class="login-image">
+    <img src="assets/images/login.svg" alt="Login image" />
+  </div>
+
+  <div class="login-form">
+    <div class="form-content">
+      <div class="login-header">
+        <div class="logo">
+          <img src="assets/images/logos/Logo-RD.svg" alt="Reddooh logo" />
+        </div>
+        <h1 class="form-title">{{ 'title' | translate }}</h1>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!-- EMAIL FIELD -->
+        <mat-form-field appearance="outline" hideRequiredMarker="true">
+          <mat-label>{{ 'emailLabel' | translate }}</mat-label>
+          <input matInput formControlName="email" type="email" required />
+          <mat-error *ngIf="email.invalid && (email.dirty || email.touched) && !emailErrorMsg">
+            <span *ngIf="email.errors?.['required']">{{ 'emailRequired' | translate }}</span>
+            <span *ngIf="email.errors?.['email']">{{ 'emailInvalid' | translate }}</span>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- PASSWORD FIELD -->
+        <mat-form-field appearance="outline" hideRequiredMarker="true">
+          <mat-label>{{ 'passwordLabel' | translate }}</mat-label>
+          <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="password" required />
+          <button type="button" mat-icon-button matSuffix (click)="togglePasswordVisibility()">
+            <mat-icon class="pass-eye">{{ showPassword ? 'visibility' : 'visibility_off' }}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid && (password.dirty || password.touched) && !passwordErrorMsg">
+            {{ 'passwordRequired' | translate }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- SUBMIT BUTTON -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+          {{ 'submit' | translate }}
+        </button>
+      </form>
+
+      <!-- Error backend messages in the same position as success -->
+      <div *ngIf="emailErrorMsg || passwordErrorMsg" class="error-message" style="color: red; margin-top: 1rem;">
+        <p *ngIf="emailErrorMsg">{{ emailErrorMsg | translate }}</p>
+        <p *ngIf="passwordErrorMsg">{{ passwordErrorMsg | translate }}</p>
+      </div>
+
+      <!-- SUCCESS MESSAGE & TOKEN -->
+      <div *ngIf="successMessage" class="success-message" style="color: green; margin-top: 1rem;">
+        <p>{{ successMessage | translate }}</p>
+        <p><strong>Token:</strong> {{ token }}</p>
+      </div>
+
+      <div class="divider">
+        <span>{{ 'divider' | translate }}</span>
+      </div>
+
+      <button mat-stroked-button class="decathlon-button" (click)="startSSOLogin()">
+        {{ 'decathlon' | translate }}
+      </button>
+
+      <div class="register-link">
+        {{ 'registerPrompt' | translate }}
+        <a (click)="showWarningMessage($event)" style="cursor: pointer;">Registro</a>
+      </div>
+
+      <div *ngIf="showWarning" class="warning-message" style="margin-top: 0.5rem;">
+        <p>¡Atención! Registro temporalmente deshabilitado.</p>
+      </div>
+    </div>
+
+    <div class="form-footer">
+      <div class="language-selector">
+        <mat-icon>language</mat-icon>
+        <span>{{ 'languageLabel' | translate }}</span>
+        <app-idioma-selector (languageChanged)="onLanguageChange($event)"></app-idioma-selector>
+      </div>
+
+      <div class="econocom-brand">
+        <img src="assets/images/logos/Econocom.svg" alt="Econocom" />
+      </div>
+    </div>
+  </div>
+</div>

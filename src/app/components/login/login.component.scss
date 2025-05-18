@@ -1,0 +1,348 @@
+@import '../../../assets/scss/1-settings/_variables';
+
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+
+  .login-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neutral-95;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .login-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-l;
+    font-family: $font-stack;
+    max-width: 500px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+
+    .form-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+
+      .login-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+
+        .logo {
+          margin-bottom: $spacing-l;
+
+          img {
+            height: 55px;
+          }
+        }
+
+        h1 {
+          font-size: 1.625rem;
+          color: $neutral-20;
+          margin-bottom: $spacing-s;
+          text-align: center;
+        }
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        mat-form-field {
+          width: 100%;
+
+          &.mat-form-field-invalid {
+            .mat-form-field-outline {
+              stroke: #f44336 !important;
+            }
+          }
+        }
+
+        button[mat-raised-button] {
+          min-height: 45px;
+          padding: $spacing-s;
+          margin-top: $spacing-s;
+          color: $white;
+          background-color: $primary;
+
+          &:hover {
+            background-color: darken($primary, 10%);
+          }
+        }
+
+        .pass-eye {
+          color: $neutral-50;
+        }
+      }
+
+      .message-box {
+        margin-top: $spacing-s;
+        padding: $spacing-s;
+        border-radius: 4px;
+        font-size: $font-s;
+        width: 100%;
+        text-align: left;
+
+        p {
+          margin: 0 0 4px 0;
+          word-break: break-word;
+        }
+
+        strong {
+          font-weight: bold;
+        }
+      }
+
+      .success-message {
+        @extend .message-box;
+        background-color: #e8f5e9;
+        border: 1px solid #4caf50;
+        color: #2e7d32;
+      }
+
+      .error-message {
+        @extend .message-box;
+        background-color: #fdecea;
+        border: 1px solid #f44336;
+        color: #b00020;
+      }
+
+      .warning-message {
+        background-color: #fff8e1;
+        border: 1px solid #ffecb3;
+        color: #ff9800;
+        padding: $spacing-s;
+        border-radius: 4px;
+        font-size: $font-s;
+        width: 100%;
+        text-align: left;
+      }
+
+      .divider {
+        width: 100%;
+        margin: $spacing-l 0 $spacing-s;
+        color: $neutral-20;
+        text-align: center;
+        font-size: $font-s;
+        font-weight: bold;
+
+        span {
+          font-weight: inherit;
+        }
+      }
+
+      .decathlon-button {
+        width: 100%;
+        background-color: #4c29ca;
+        color: $white;
+        border-radius: $border-radius-s;
+        padding: 0 $spacing-m;
+        min-height: 45px;
+        text-align: center;
+        margin-bottom: $spacing-m;
+
+        &:hover {
+          background-color: darken(#4c29ca, 10%);
+        }
+      }
+
+      .register-link {
+        width: 100%;
+        font-size: $font-s;
+        font-weight: bold;
+        text-align: center;
+        margin-top: $spacing-s;
+        margin-bottom: $spacing-l;
+
+        a {
+          color: $primary;
+          transition: color 0.2s ease;
+          cursor: pointer;
+
+          &:hover {
+            color: #4c29ca;
+            text-decoration: underline;
+          }
+
+          &:active {
+            color: darken(#4c29ca, 10%);
+          }
+        }
+      }
+    }
+
+    .form-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: $spacing-m;
+
+      .language-selector {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        height: 28px;
+
+        mat-icon {
+          font-size: 18px;
+          color: $neutral-50;
+          width: 18px;
+          height: 18px;
+        }
+
+        span {
+          font-size: 13px;
+          color: $neutral-50;
+          margin-top: 1px;
+        }
+
+        app-idioma-selector {
+          display: block;
+          height: 28px;
+
+          ::ng-deep {
+            .custom-language-selector {
+              select {
+                font-size: 13px;
+                height: 28px;
+                color: $neutral-30;
+                padding-left: 2px;
+                cursor: pointer;
+                transition: color 0.2s;
+
+                &:hover {
+                  color: $neutral-20;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .econocom-brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $neutral-50;
+
+        img {
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* MEDIUM DEVICES (13", 1024px–1366px) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .login-container {
+    flex-direction: row;
+
+    .login-image {
+      flex: 2;
+    }
+
+    .login-form {
+      flex: 1;
+      padding: $spacing-m;
+      max-width: 450px;
+
+      .form-content {
+        padding-top: $spacing-s;
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        form {
+          gap: 0.25rem;
+
+          mat-form-field {
+            font-size: 14px;
+
+            input {
+              font-size: 14px;
+              padding: 6px 8px;
+            }
+          }
+
+          button[mat-raised-button] {
+            min-height: 40px;
+            font-size: 14px;
+          }
+        }
+
+        .decathlon-button {
+          min-height: 40px;
+          font-size: 14px;
+        }
+
+        .register-link {
+          font-size: 13px;
+        }
+      }
+
+      .form-footer {
+        padding-top: $spacing-s;
+
+        .language-selector span,
+        .econocom-brand {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+/* SMALL DEVICES (tablets, phones < 1024px) */
+@media (max-width: 1023px) {
+  .login-container {
+    flex-direction: column;
+    overflow-x: hidden;
+
+    .login-image {
+      height: 35vh;
+      width: 100vw; 
+      overflow: hidden;
+
+      img {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+      }
+    }
+
+    .login-form {
+      width: 100%;
+      height: auto;
+      min-height: 65vh;
+      padding: $spacing-m;
+
+      .form-content {
+        justify-content: flex-start;
+        padding-top: $spacing-m;
+      }
+    }
+  }
+}

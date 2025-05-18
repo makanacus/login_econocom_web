@@ -1,0 +1,27 @@
+{
+  "title": "Connectez-vous à votre compte",
+  "emailLabel": "E-mail",
+  "emailRequired": "L'e-mail est requis",
+  "emailInvalid": "Entrez un e-mail valide",
+  "passwordLabel": "Mot de passe",
+  "passwordRequired": "Le mot de passe est requis",
+  "submit": "SE CONNECTER",
+  "divider": "Autres moyens d'accès :",
+  "decathlon": "SE CONNECTER AVEC DECATHLON",
+  "registerPrompt": "Vous n'avez pas de compte ?",
+  "registerLink": "Inscrivez-vous",
+  "languageLabel": "LANGUE :",
+  "login": {
+    "success": "Connexion réussie",
+    "ssoSuccess": "Connexion SSO réussie",
+    "invalidUser": "Utilisateur non trouvé",
+    "invalidPassword": "Mot de passe invalide"
+  },
+  "sso": {
+    "authSuccess": "Authentification SSO réussie. Redirection...",
+    "authError": "Échec de l'authentification SSO.",
+    "missingCode": "Code d'autorisation non reçu.",
+    "validate": "Validation du SSO..."
+  }
+  
+}

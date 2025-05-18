@@ -1,0 +1,26 @@
+{
+  "title": "Acesse sua conta",
+  "emailLabel": "E-mail",
+  "emailRequired": "O e-mail é obrigatório",
+  "emailInvalid": "Insira um e-mail válido",
+  "passwordLabel": "Senha",
+  "passwordRequired": "A senha é obrigatória",
+  "submit": "ENTRAR",
+  "divider": "Outras formas de acesso:",
+  "decathlon": "ENTRAR COM DECATHLON",
+  "registerPrompt": "Ainda não tem uma conta?",
+  "registerLink": "Cadastre-se",
+  "languageLabel": "IDIOMA:",
+  "login": {
+    "success": "Login bem-sucedido",
+    "ssoSuccess": "Login SSO bem-sucedido",
+    "invalidUser": "Usuário não encontrado",
+    "invalidPassword": "Senha inválida"
+  },
+  "sso": {
+    "authSuccess": "Autenticação SSO bem-sucedida. Redirecionando...",
+    "authError": "Falha na autenticação SSO.",
+    "missingCode": "Código de autorização não recebido.",
+    "validate": "Validando SSO..."
+  }
+}
