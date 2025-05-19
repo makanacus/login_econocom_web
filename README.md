@@ -1,59 +1,46 @@
-# LoginFrontend
+LoginFrontend - Aplicación Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+📌 Descripción del Proyecto
+Este proyecto es una aplicación frontend desarrollada con Angular CLI v19.2.12. Proporciona una interfaz de inicio de sesión y puede extenderse con funcionalidades adicionales según sea necesario.
 
-## Development server
+🚀 Comenzando
+Requisitos Previos
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
-To start a local development server, run:
+Node.js (versión 16 o superior recomendada)
 
-```bash
-ng serve
-```
+npm (incluido con Node.js) o Yarn (opcional)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Angular CLI (instalar globalmente con npm install -g @angular/cli)
 
-## Code scaffolding
+Instalación
+Clona el repositorio
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+bash
+git clone <url-del-repositorio>
+cd login-frontend
+Instala las dependencias
 
-```bash
-ng generate component component-name
-```
+bash
+npm install
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Inicia el servidor de desarrollo
 
-```bash
-ng generate --help
-```
+bash
+ng serve --open
+Esto hará que:
 
-## Building
+La aplicación se ejecute en http://localhost:4200/
 
-To build the project run:
+Se abra automáticamente en tu navegador predeterminado
 
-```bash
-ng build
-```
+Active la recarga en caliente para cambios en tiempo real
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🛠 Comandos de Desarrollo
+Comando	Descripción
+ng serve	Inicia el servidor de desarrollo (por defecto en http://localhost:4200)
+ng build	Compila el proyecto para producción (salida en /dist)
+ng test	Ejecuta pruebas unitarias con Karma
+ng e2e	Ejecuta pruebas end-to-end (si están configuradas)
+ng generate component <nombre>	Genera un nuevo componente
+ng generate service <nombre>	Genera un nuevo servicio
