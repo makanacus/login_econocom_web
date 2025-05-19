@@ -7,7 +7,7 @@
   "passwordRequired": "A senha é obrigatória",
   "submit": "ENTRAR",
   "divider": "Outras formas de acesso:",
-  "decathlon": "ENTRAR COM DECATHLON",
+  "sso-button": "ENTRAR COM SSO",
   "registerPrompt": "Ainda não tem uma conta?",
   "registerLink": "Cadastre-se",
   "registre": "Atenção! O registro está temporariamente desativado.",

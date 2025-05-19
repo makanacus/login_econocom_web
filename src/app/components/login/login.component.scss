@@ -150,9 +150,9 @@
         }
       }
 
-      .decathlon-button {
+      .sso-button {
         width: 100%;
-        background-color: #4c29ca;
+        background-color: $secondary;
         color: $white;
         border-radius: $border-radius-s;
         padding: 0 $spacing-m;
@@ -161,7 +161,7 @@
         margin-bottom: $spacing-m;
 
         &:hover {
-          background-color: darken(#4c29ca, 10%);
+          background-color: darken($secondary, 10%);
         }
       }
 
@@ -293,7 +293,7 @@
           }
         }
 
-        .decathlon-button {
+        .sso-button {
           min-height: 40px;
           font-size: 14px;
         }

@@ -7,7 +7,7 @@
   "passwordRequired": "Le mot de passe est requis",
   "submit": "SE CONNECTER",
   "divider": "Autres moyens d'accès :",
-  "decathlon": "SE CONNECTER AVEC DECATHLON",
+  "sso-button": "SE CONNECTER AVEC SSO",
   "registerPrompt": "Vous n'avez pas de compte ?",
   "registerLink": "Inscrivez-vous",
   "registre": "Attention ! L'inscription est temporairement désactivée.",

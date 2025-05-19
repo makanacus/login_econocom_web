@@ -57,13 +57,13 @@
         <span>{{ 'divider' | translate }}</span>
       </div>
 
-      <button mat-stroked-button class="decathlon-button" (click)="startSSOLogin()">
-        {{ 'decathlon' | translate }}
+      <button mat-stroked-button class="sso-button" (click)="startSSOLogin()">
+        {{ 'sso-button' | translate }}
       </button>
 
       <div class="register-link">
         {{ 'registerPrompt' | translate }}
-        <a (click)="showWarningMessage($event)" style="cursor: pointer;">Registro</a>
+        <a (click)="showWarningMessage($event)" style="cursor: pointer;">{{ 'registerLink' | translate}}</a>
       </div>
 
       <div *ngIf="showWarning" class="warning-message" style="margin-top: 0.5rem;">

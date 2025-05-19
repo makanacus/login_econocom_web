@@ -7,7 +7,7 @@
   "passwordRequired": "Password is required",
   "submit": "LOGIN",
   "divider": "Other login methods:",
-  "decathlon": "LOGIN WITH DECATHLON",
+  "sso-button": "LOGIN WITH SSO",
   "registerPrompt": "Don't have an account?",
   "registerLink": "Sign up",
   "registre": "Attention! Registration is temporarily disabled.",

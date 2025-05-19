@@ -7,7 +7,7 @@
   "passwordRequired": "La contraseña es requerida",
   "submit": "ENTRAR",
   "divider": "Otras formas de acceso:",
-  "decathlon": "ENTRAR CON DECATHLON",
+  "sso-button": "ENTRAR CON SSO",
   "registerPrompt": "¿No tienes cuenta?",
   "registerLink": "Regístrate",
   "registre": "¡Atención! Registro temporalmente deshabilitado.",

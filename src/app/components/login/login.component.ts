@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   passwordErrorMsg: string | null = null;
   showWarning = false;
   warningTimeout: any;
+  registerLink: string | null = null;
   registre: string | null = null;
 
   private langSub?: Subscription;
@@ -45,6 +46,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.selectedLanguage = lang;
     });
 
+    this.registerLink = 'registerLink';
     this.registre = 'registre';
 
     this.route.queryParams.subscribe(params => {
