@@ -35,12 +35,3 @@ La aplicación se ejecute en http://localhost:4200/
 Se abra automáticamente en tu navegador predeterminado
 
 Active la recarga en caliente para cambios en tiempo real
-
-🛠 Comandos de Desarrollo
-Comando	Descripción
-ng serve	Inicia el servidor de desarrollo (por defecto en http://localhost:4200)
-ng build	Compila el proyecto para producción (salida en /dist)
-ng test	Ejecuta pruebas unitarias con Karma
-ng e2e	Ejecuta pruebas end-to-end (si están configuradas)
-ng generate component <nombre>	Genera un nuevo componente
-ng generate service <nombre>	Genera un nuevo servicio
